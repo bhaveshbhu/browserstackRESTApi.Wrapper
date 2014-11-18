@@ -14,13 +14,11 @@ $ sudo python setup.py install    # to install globally
 ```
 
 Tutorial
-------------
-   *Edit config.py file for Proxy Settings if using proxy.
-   *Edit username and browserStack Access Key [Link](https://www.browserstack.com/accounts/automate).
-   Create AuthHandler Object using 
-'''bash
-  $ auth = auth.AuthHandler(config.USERNAME,config.ACCESS_KEY,proxy_data=config.PROXY_URL)
-'''
+-----------
+    Edit config.py file for Proxy Settings if using proxy.
+    Edit username and browserStack Access Key [Link](https://www.browserstack.com/accounts/automate).
+    Create AuthHandler Object using 
+
 ```bash
 $ auth = auth.AuthHandler(config.USERNAME,config.ACCESS_KEY,proxy_data=config.PROXY_URL) (if using proxy)
 $ auth = auth.AuthHandler(config.USERNAME,config.ACCESS_KEY,proxy_data=None)            (if not using proxy)   
