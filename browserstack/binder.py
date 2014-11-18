@@ -13,8 +13,8 @@ class BindAPI(object):
     def __init__(self, api,config):
         self.path = '/%s' % config.get('path')
         #self.path = "/worker"
-        print self.path
-    	self.allowed_param = config.get('allowed_param', [])
+        #print self.path
+    	#self.allowed_param = config.get('allowed_param', [])
     	self.method = config.get('method', 'GET')
     	
     	self.require_auth = config.get('require_auth', True)

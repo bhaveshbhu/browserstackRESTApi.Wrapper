@@ -29,7 +29,6 @@ class API(object):
     	_config = {}
     	headers = {'content-type': 'application/json', 'Accept': 'application/json'}
         default = {'path' :'browsers',
-        			'allowed_param' :"['flat', 'all']",
         			'require_auth': 'True',
         			"default_val":_config,
         			"defaut_header" : headers
@@ -44,7 +43,6 @@ class API(object):
     	_config = {}
     	headers = {'content-type': 'application/json', 'Accept': 'application/json'}
         default = {'path' :'workers',
-        			'allowed_param' :"[]",
         			'require_auth': 'True',
         			"default_val":_config,
         			"defaut_header" : headers
@@ -59,7 +57,6 @@ class API(object):
     	_config = {}
     	headers = {'content-type': 'application/json', 'Accept': 'application/json'}
         default = {'path' :'status',
-        			'allowed_param' :"[]",
         			'require_auth': 'True',
         			"default_val":_config,
         			"defaut_header" : headers
@@ -79,7 +76,6 @@ class API(object):
 
     	headers = {'content-type': 'application/json', 'Accept': 'application/json'}
         default = {'path' :'worker/%s' % kwargs['id'],
-        			'allowed_param' :"['id']",
         			'require_auth': 'True',
         			"default_val":_config,
         			"defaut_header" : headers
@@ -98,8 +94,6 @@ class API(object):
 				
     	headers = {'content-type': 'application/x-www-form-urlencoded', 'Accept': 'application/json'}
     	default = {'path' :'worker',
-        			'allowed_param' :"['os', 'os_version','browser',\
-        			'device','browser_version','url','name','build','project','timeout']",
         			'require_auth': 'True',
         			"default_val":_config,
         			"defaut_header" : headers,
@@ -120,7 +114,6 @@ class API(object):
 				
     	headers = {'content-type': 'application/x-www-form-urlencoded', 'Accept': 'application/json'}
     	default = {'path' :'worker/%s'% kwargs["id"],
-        			'allowed_param' :"[]",
         			'require_auth': 'True',
         			"default_val":_config,
         			"defaut_header" : headers,

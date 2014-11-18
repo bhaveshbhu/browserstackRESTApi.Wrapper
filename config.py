@@ -8,11 +8,11 @@ Python wrapper for Browserstack API
 
 PROXY_URL = {
 	"url" : "http://10.1.1.16:80",
-	"proxyUsername":"Proxyusername",
-	"proxyPassword":"Proxypass"
+	"proxyUsername":"063.319926",
+	"proxyPassword":"vishal_91"
 }
 
 #get from your browserstack account
-USERNAME = 'username'
-ACCESS_KEY = 'key'
+USERNAME = 'bhavesh37'
+ACCESS_KEY = 'GsfEym2pV1Gq4oiHysVY'
 
