@@ -12,6 +12,5 @@ setup(name="browserstack.REST.Wrapper",
       install_requires=[
       "simplejson>=3.3.2",
       "requests>=2.2.0",
-      "Pillow>=2.3.0",
       ]
       )
