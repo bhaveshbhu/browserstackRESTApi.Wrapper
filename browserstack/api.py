@@ -27,42 +27,43 @@ class API(object):
     def _get_browsers(self,**kwargs):
     #default config
     	_config = {}
+       	for k in kwargs:
+       		_config[k] = kwargs[k]
+
     	headers = {'content-type': 'application/json', 'Accept': 'application/json'}
         default = {'path' :'browsers',
         			'require_auth': 'True',
         			"default_val":_config,
         			"defaut_header" : headers
         			}
-       	for k in kwargs:
-       		default[k] = kwargs[k]
        	self.result = BindAPI(self,default).result
 
 
     def _get_workers(self,**kwargs):
     #default config
     	_config = {}
+
     	headers = {'content-type': 'application/json', 'Accept': 'application/json'}
         default = {'path' :'workers',
         			'require_auth': 'True',
         			"default_val":_config,
         			"defaut_header" : headers
         			}
-       	for k in kwargs:
-       		default[k] = kwargs[k]
        	self.result = BindAPI(self,default).result
         
 
     def _api_status(self,**kwargs):
     #default config
     	_config = {}
+#       	for k in kwargs:
+#       		default[k] = kwargs[k]
+
     	headers = {'content-type': 'application/json', 'Accept': 'application/json'}
         default = {'path' :'status',
         			'require_auth': 'True',
         			"default_val":_config,
         			"defaut_header" : headers
         			}
-       	for k in kwargs:
-       		default[k] = kwargs[k]
        	self.result = BindAPI(self,default).result
 
 
@@ -73,7 +74,6 @@ class API(object):
 
     	if kwargs.get("id")==None:
     		raise InvalidRequestError("No id passed")
-
     	headers = {'content-type': 'application/json', 'Accept': 'application/json'}
         default = {'path' :'worker/%s' % kwargs['id'],
         			'require_auth': 'True',
@@ -90,17 +90,19 @@ class API(object):
             "browser_version":"8.0",
             "browser":"ie",
         	"url":"http://google.com"}
-
-				
+        	
     	headers = {'content-type': 'application/x-www-form-urlencoded', 'Accept': 'application/json'}
+       	for k in kwargs:
+       		_config[k] = kwargs[k]
+
     	default = {'path' :'worker',
         			'require_auth': 'True',
         			"default_val":_config,
         			"defaut_header" : headers,
         			"method":"POST"
         			}
-       	for k in kwargs:
-       		default[k] = kwargs[k]
+        			
+
        	self.result = BindAPI(self,default).result
 
 
