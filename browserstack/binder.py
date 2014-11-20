@@ -9,7 +9,6 @@ Python wrapper for Browserstack API
 from browserstack.error import BrowserStackError
 
 class BindAPI(object):
-    
     def __init__(self, api,config):
         self.path = '/%s' % config.get('path')
         #self.path = "/worker"
@@ -19,7 +18,7 @@ class BindAPI(object):
     	
     	self.require_auth = config.get('require_auth', True)
         self.api = api
-		
+        
         if self.require_auth and not api.auth:
             raise BrowserStackError('Authentication required!')
 		

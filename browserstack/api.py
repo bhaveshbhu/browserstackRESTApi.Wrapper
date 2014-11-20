@@ -9,7 +9,6 @@ import os
 from browserstack.binder import BindAPI
 from browserstack.error import BrowserStackError
 
-
 class API(object):
     def __init__(self, auth_handler=None,
             host='api.browserstack.com',
@@ -18,7 +17,7 @@ class API(object):
         self.auth = auth_handler
         if auth_handler:
             auth_handler.api = self
-            
+                
         self.host = host
         self.api_root = api_root
         self.result = None

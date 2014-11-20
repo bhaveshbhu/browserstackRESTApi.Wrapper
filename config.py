@@ -14,5 +14,5 @@ PROXY_URL = {
 
 #get from your browserstack account
 USERNAME = 'bhavesh'
-ACCESS_KEY = 'accessKey'
+ACCESS_KEY = 'pass'
 

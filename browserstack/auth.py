@@ -17,7 +17,6 @@ except ImportError:
     import json
 
 class AuthHandler(object):
-    A_HOST = 'api.browserstack.com/3'
     def __init__(self,USERNAME,ACCESS_KEY,**kwargs):
         self._username = USERNAME
         self.access_key = ACCESS_KEY
@@ -29,7 +28,6 @@ class AuthHandler(object):
         self.session = requests.Session()	
        	self.proxy_url = None
        	self.myheader = None
-       	url = self._get_auth_url('')
        	if not self.proxy==None:
        		self.proxy_url = {'http': self.proxy.get('url')}
        		token = base64.encodestring('%s:%s' %(self.proxy.get('proxyUsername'), self.proxy.get('proxyPassword'))).strip()
@@ -37,14 +35,13 @@ class AuthHandler(object):
 			
 		#self.fetch()
 		
-		
-		
 		self.result = "{}"
 		
 		
     def _get_auth_url(self,extra):
         prefix = 'http://'
-        return prefix + self.A_HOST+extra
+        print prefix + self.api.host+ self.api.api_root+extra
+        return prefix + self.api.host+ self.api.api_root+extra
 
     def _checkResponse(self,ret):
         if ret.status_code == 200:
