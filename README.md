@@ -31,7 +31,16 @@ Examples
 $ apiO._create_browser_worker()
 $ print apiO.result
 
-$ apiO._get_browsers(flat="true")
+$ apiO._create_browser_worker(os_version="Mountain Lion", browser_version="12.12", os="OS X",browser="opera")
+$ print apiO.result
+
+$ apiO._create_browser_worker(browser_version="12.12", os="OS X")  (Default Windows 7)
+$ print apiO.result
+
+$ apiO._get_browsers(flat="true",all="true")
+$ print apiO.result
+
+$ apiO._get_browsers()
 $ print apiO.result
 
 $ apiO._api_status()
